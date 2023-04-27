@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+
+:root {
+  --main-color: #0d1117;
+  --assistant-color: #161b22;
+  --input-font-color: #c2c3c5;
+  --border-color: #30363d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Albert Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--main-color);
+}
+
+.user-form {
+  background-color: var(--assistant-color);
+  width: clamp(65%, 350px, 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.user-form input {
+  border: 1px solid var(--border-color);
+  background-color: var(--main-color);
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  border-radius: 0.3rem;
+  color: #fff;
+  font: inherit;
+  width: 100%;
+}
+
+.user-form input:focus {
+  outline: none;
+  caret-color: aqua;
+  animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: aqua;
+  }
+}
+
+.user-form input::placeholder {
+  color: var(--input-font-color);
+}
+
+.user-form button {
+  position: absolute;
+  right: 1.5rem;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 0.3rem;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+
+main {
+  width: 350px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: 3px solid var(--border-color);
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--assistant-color);
+  box-shadow: 6px 10px 6px rgba(0, 0, 0, 0.274);
+  border-radius: 1rem;
+text-align: center;   
+}
+
+.user-image {
+  width: 150px;
+  border: 10px solid var(--main-color);
+  border-radius: 50%;
+}
+
+.user-info {
+    padding: 1rem;
+}
+
+main span.count {
+    font-family: 'Inconsolata', monospace;
+    padding-left: 5px;
+}
+
+.user-name {
+    border-bottom: 1px solid var(--border-color);    
+}
+
+h2 {
+    color: #fff;
+    letter-spacing: 3px;
+} 
+
+small {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--input-font-color);
+    letter-spacing: 1.5px;
+}
+
+p {
+color: #eee !important;
+text-align: justify;
+padding: 0 1rem;
+}
+
+ul {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+ul li {
+    color: #fff;
+    background-color: #40454e;
+    padding: .25rem .5rem;
+    margin: .25rem;
+    box-shadow:5px 5px 9px rgba(0, 0, 0, 0.219);
+    border-radius: .3rem;
+}
+
+.repos {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.repos a{
+    text-decoration: none;
+    color: #3696ff;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: .25rem .5rem;
+    letter-spacing: 2px;
+    margin: .25rem;
+    box-shadow:3px 3px 3px rgba(0, 0, 0, 0.219);    
+}
+
+.repos i {
+color: var(--input-font-color);
+}
+
